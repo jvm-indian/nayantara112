@@ -90,6 +90,12 @@ export default function Dashboard() {
             <button onClick={() => navigate('/lifestyle')} className="px-6 py-3 text-xl bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors duration-300 font-bold shadow-lg">
               💪 Lifestyle & Diet
             </button>
+            <button onClick={() => navigate('/claude-chat')} className="px-6 py-3 text-xl bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors duration-300 font-bold shadow-lg">
+              🧠 Claude AI Brain
+            </button>
+            <button onClick={() => navigate('/vision-games')} className="px-6 py-3 text-xl bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white rounded-lg transition-colors duration-300 font-bold shadow-lg">
+              🎮 Vision Games
+            </button>
             <button onClick={() => navigate('/gita')} className="px-4 py-2 bg-ayur-gold/20 hover:bg-ayur-gold/40 text-ayur-slate rounded-lg transition-colors duration-300">
               Gita Knowledge
             </button>

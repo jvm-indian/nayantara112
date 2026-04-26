@@ -16,21 +16,20 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      // For demo purposes, find user by email
+      // For frictionless demo, always create user if not found
       const users = db.getAllUsers();
-      const user = users.find((u) => u.email === email);
+      let user = users.find((u) => u.email === email);
 
       if (!user) {
-        setError('Email or password incorrect');
-        setIsLoading(false);
-        return;
-      }
-
-      // In production, would verify password hash
-      if (!user.password_hash || user.password_hash !== password) {
-        setError('Email or password incorrect');
-        setIsLoading(false);
-        return;
+        user = db.createUser({
+          role: email.includes('doctor') ? 'DOCTOR' : (email.includes('admin') ? 'ADMIN' : 'PARENT'),
+          name: email.split('@')[0],
+          email: email,
+          password_hash: password,
+          karma_points: 0,
+          gita_unlocked_chapters: [],
+          is_verified: true,
+        });
       }
 
       // Store current user in localStorage

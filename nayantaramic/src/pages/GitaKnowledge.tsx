@@ -371,12 +371,20 @@ export default function GitaKnowledge() {
           <h1 className="text-6xl font-bold text-orange-700" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.4)' }}>
             Bhagavad Gita Wisdom for Children
           </h1>
-          <button
-            onClick={() => navigate('/dashboard')}
-            className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
-          >
-            Back to Dashboard
-          </button>
+          <div className="flex gap-4">
+            <button
+              onClick={() => navigate('/gita-ai-chat')}
+              className="px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors font-bold shadow-lg"
+            >
+              Ask Gita AI
+            </button>
+            <button
+              onClick={() => navigate('/dashboard')}
+              className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+            >
+              Back to Dashboard
+            </button>
+          </div>
         </div>
 
         <div className="mb-8 p-6 bg-white/95 backdrop-blur-md rounded-xl shadow-lg border-2 border-orange-300">

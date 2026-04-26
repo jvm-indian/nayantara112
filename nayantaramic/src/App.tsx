@@ -16,6 +16,9 @@ import GameMirrorPatternPage from './pages/GameMirrorPatternPage'
 import GameHiddenHerbPage from './pages/GameHiddenHerbPage'
 import GameLionsBreathPage from './pages/GameLionsBreathPage'
 import GameSocialDetectivePage from './pages/GameSocialDetectivePage'
+import VisionGames from './pages/VisionGames'
+import ClaudeChat from './pages/ClaudeChat'
+import GitaAiChat from './pages/GitaAiChat'
 
 export default function App() {
   return (
@@ -39,8 +42,12 @@ export default function App() {
           <Route path="/game/social-detective" element={<GameSocialDetectivePage />} />
           {/* Gita knowledge tab */}
           <Route path="/gita" element={<GitaKnowledge />} />
+          <Route path="/gita-ai-chat" element={<GitaAiChat />} />
           {/* Lifestyle & Diet advice */}
           <Route path="/lifestyle" element={<LifestylePage />} />
+          {/* AI Brain & Vision Games */}
+          <Route path="/claude-chat" element={<ClaudeChat />} />
+          <Route path="/vision-games" element={<VisionGames />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
